@@ -1,0 +1,30 @@
+﻿@model ITP_App.Models.Admins.RulesViewModel
+
+@{
+    ViewData["Title"] = "Rules";
+}
+
+<h1>Rules</h1>
+<link rel="stylesheet" type="text/css" href="~/css/tableView.css" />
+<link rel="stylesheet" href="~/css/addItem.css" />
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var rule in Model.Rules)
+        {
+            <tr>
+                <td>@rule.Name</td>
+                <td>@rule.Text</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

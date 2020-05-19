@@ -1,0 +1,63 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<link rel="stylesheet" href="~/css/addItem.css" />
+<h1 class="title">@ViewData["Title"]</h1>
+
+<div style="text-align: center;">
+    <div>
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h4>Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="All"></div>
+            <div class="labels">
+                <div class="column">
+                    <br />
+                    <div>
+                        <label asp-for="Input.Email"><b>Email:</b></label>
+                        <input class="boxes" asp-for="Input.Email" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div>
+                        <label asp-for="Input.FirstName"><b>First Name:</b></label>
+                        <input class="boxes" asp-for="Input.FirstName" />
+                        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div>
+                        <label asp-for="Input.LastName"><b>Last Name:</b></label>
+                        <input class="boxes" asp-for="Input.LastName" />
+                        <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div>
+                        <label asp-for="Input.Role"><b>Role:</b></label>
+                        <input class="boxes" asp-for="Input.Role" />
+                        <span asp-validation-for="Input.Role" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div>
+                        <label asp-for="Input.Password"><b>Password:</b></label>
+                        <input class="boxes" asp-for="Input.Password" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div>
+                        <label asp-for="Input.ConfirmPassword"><b>Confirm Password:</b></label>
+                        <input class="boxes" asp-for="Input.ConfirmPassword" />
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="buttons">Register</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

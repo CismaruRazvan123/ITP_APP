@@ -1,0 +1,37 @@
+﻿body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+input {
+    height: 25px;
+    width: 200px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.labels {
+    text-align: left;
+    display: inline-block;
+}
+
+.boxes {
+    background-color: #434bde;
+    float: center;
+    border: 1px;
+    border-style: solid;
+    border-color: #0b1d5a;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 17px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    column-count: 2;
+}

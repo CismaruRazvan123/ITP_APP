@@ -1,0 +1,32 @@
+﻿@model ITP_App.Models.Clients.ReviewViewModel
+
+@{
+    ViewData["Title"] = "Reviews";
+}
+
+    <h1>Review</h1>
+    <link rel="stylesheet" type="text/css" href="~/css/tableView.css" />
+    <link rel="stylesheet" href="~/css/addItem.css" />
+
+<table>
+    <thead>
+        <tr>
+            <th>Rating</th>
+            <th>Title</th>
+            <th>Content</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var review in Model.Reviews)
+        {
+        <tr>
+            <td>@review.Rating</td>
+            <td>@review.Title</td>
+            <td>@review.Text</td>
+        </tr>
+         }
+    </tbody>
+</table>
+    
+

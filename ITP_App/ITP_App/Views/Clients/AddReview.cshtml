@@ -1,0 +1,48 @@
+﻿@using ITP_App.Models.Clients;
+@model AddReviewViewModel;
+@{
+    ViewData["Title"] = "AddReviews";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ITP</title>
+    <link rel="stylesheet" href="~/css/addItem.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title" ;>Add Review</h2>
+        <br>
+        <form asp-action="AddReview" method="post">
+            <div style="text-align: center;">
+                <br>
+
+                <div class="labels">
+
+                    <div class="column">
+                        <label for="Rating"><b>Rating:</b></label>
+                        <input asp-for="Rating" class="boxes" type="text" placeholder="Rating..." name="Rating"><br>
+
+                        <label for="Title"><b>Title:</b></label>
+                        <input asp-for="Title" class="boxes" type="text" placeholder="Title..." name="Title"><br>
+
+                        <label for="Text"><b>Content:</b></label>
+                        <input asp-for="Text" class="boxes" type="text" placeholder="Content..." name="Text"><br>
+
+                    </div>
+                </div>
+                <button type="submit" class="buttons">Add Review</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

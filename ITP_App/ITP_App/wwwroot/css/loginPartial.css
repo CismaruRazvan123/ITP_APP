@@ -1,0 +1,15 @@
+﻿.buttons {
+    background-color: #006cd7;
+    border: 2px;
+    border-style: solid;
+    border-color: #3e3e6b;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}

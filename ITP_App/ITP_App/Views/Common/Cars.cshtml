@@ -1,0 +1,44 @@
+﻿@model ITP_App.Models.Admins.CarsViewModel
+
+@{
+    ViewData["Title"] = "Cars";
+}
+
+    <h1>Cars</h1>
+    <link rel="stylesheet" type="text/css" href="~/css/tableView.css" />
+    <link rel="stylesheet" href="~/css/addItem.css" />
+
+<table>
+    <thead>
+        <tr>
+            <th>Car Type</th>
+            <th>Civ Series</th>
+            <th>Body Series</th>
+            <th>Car Mileage</th>
+            <th>Year Of Manufacture</th>
+            <th>ItpValability</th>
+            <th>OwnerFirstName</th>
+            <th>OwnerLastName</th>
+            <th>OwnerCNP</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var car in Model.Cars)
+        {
+        <tr>
+            <td>@car.CarType</td>
+            <td>@car.CivSeries</td>
+            <td>@car.BodySeries</td>
+            <td>@car.CarMileage</td>
+            <td>@car.YearOfManufacture</td>
+            <td>@car.ItpValability</td>
+            <td>@car.Owner.LastName</td>
+            <td>@car.Owner.FirstName</td>
+            <td>@car.Owner.CNP</td>
+        </tr>
+         }
+    </tbody>
+</table>
+    
+

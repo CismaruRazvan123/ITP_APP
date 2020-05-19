@@ -1,0 +1,45 @@
+﻿@using ITP_App.Models.Admins;
+@model AddRuleViewModel;
+@{
+    ViewData["Title"] = "AddRule";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ITP</title>
+    <link rel="stylesheet" href="~/css/addItem.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title" ;>Add Rule</h2>
+        <br>
+        <form asp-action="AddRule" method="post">
+            <div style="text-align: center;">
+                <br>
+
+                <div class="labels">
+
+                    <div class="column">
+                        <label for="Name"><b>Name:</b></label>
+                        <input asp-for="Name" class="boxes" type="text" placeholder="Name..." name="Name"><br>
+
+                        <label for="Text"><b>Text:</b></label>
+                        <input asp-for="Text" class="boxes" type="text" placeholder="Text..." name="Text"><br>
+
+                    </div>
+                </div>
+                <button type="submit" class="buttons">Add Rule</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
